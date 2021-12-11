@@ -1,15 +1,31 @@
+import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router";
-import { Contact, Home } from "./components/Pages/public";
+
+const Home = lazy(() =>
+  import("./features/Home").then(({ Home }) => ({
+    default: Home,
+  }))
+);
+
+const Test = lazy(() =>
+  import("./features/Test").then(({ Test }) => ({
+    default: Test,
+  }))
+);
 
 export default function Routers() {
   return (
     <>
       <Switch>
-        <Route exact path="/home">
-          <Home />
+        <Route exact path="/">
+          <Suspense fallback={"Loading..."}>
+            <Home />
+          </Suspense>
         </Route>
-        <Route exact path="/contact">
-          <Contact />
+        <Route exact path="/test">
+          <Suspense fallback={"Loading..."}>
+            <Test />
+          </Suspense>
         </Route>
       </Switch>
     </>
