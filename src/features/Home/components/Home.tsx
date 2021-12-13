@@ -1,5 +1,17 @@
-import { HomeProps } from "../type";
+import Banner from "./Banner";
+import { Contact } from "./Contact";
+import { Event } from "./Event";
+import { Movie } from "./Movie";
+import Pr from "./Pr";
 
-export const Home: React.FC<HomeProps> = () => {
-  return <div>Home Page</div>;
+export const Home = () => {
+  return (
+    <main>
+      <Pr />
+      <Banner />
+      <Movie />
+      <Event />
+      <Contact />
+    </main>
+  );
 };

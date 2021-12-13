@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -41,7 +41,9 @@ html {
   /* 3 */
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -78,7 +80,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -122,7 +124,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -211,9 +214,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -260,7 +263,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -345,14 +348,16 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -422,22 +427,96 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.border, .border-l-2, .border-t-\[1px\] {
+.translate-x-\[-50\%\],
+.translate-y-\[-50\%\] {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x))
+    translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+    scaleY(var(--tw-scale-y));
+}
+
+body {
+  font-family: "Poppin", sans-serif;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.left-\[20\%\] {
+  left: 20%;
+}
+
+.right-\[20\%\] {
+  right: 20%;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-\[18\%\] {
+  left: 18%;
+}
+
+.right-\[18\%\] {
+  right: 18%;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.border,
+.border-l-2,
+.border-t-\[1px\] {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .filter {
-  --tw-blur: var(--tw-empty,/*!*/ /*!*/);
-  --tw-brightness: var(--tw-empty,/*!*/ /*!*/);
-  --tw-contrast: var(--tw-empty,/*!*/ /*!*/);
-  --tw-grayscale: var(--tw-empty,/*!*/ /*!*/);
-  --tw-hue-rotate: var(--tw-empty,/*!*/ /*!*/);
-  --tw-invert: var(--tw-empty,/*!*/ /*!*/);
-  --tw-saturate: var(--tw-empty,/*!*/ /*!*/);
-  --tw-sepia: var(--tw-empty,/*!*/ /*!*/);
-  --tw-drop-shadow: var(--tw-empty,/*!*/ /*!*/);
-  --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  --tw-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
+  --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .sticky {
@@ -447,6 +526,34 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-0 {
   top: 0px;
+}
+
+.right-\[20px\] {
+  right: 20px;
+}
+
+.top-\[20px\] {
+  top: 20px;
+}
+
+.right-\[10px\] {
+  right: 10px;
+}
+
+.top-\[10px\] {
+  top: 10px;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mx-auto {
@@ -482,8 +589,48 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: contents;
 }
 
+.h-\[645px\] {
+  height: 645px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-\[121px\] {
+  height: 121px;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-\[71px\] {
+  height: 71px;
+}
+
 .h-\[50px\] {
   height: 50px;
+}
+
+.h-\[45px\] {
+  height: 45px;
+}
+
+.h-28 {
+  height: 7rem;
+}
+
+.h-\[330px\] {
+  height: 330px;
+}
+
+.h-\[548px\] {
+  height: 548px;
 }
 
 .h-24 {
@@ -506,6 +653,83 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-\[125px\] {
+  width: 125px;
+}
+
+.w-\[38px\] {
+  width: 38px;
+}
+
+.w-\[980px\] {
+  width: 980px;
+}
+
+.w-\[calc\(100\%-40px\)\] {
+  width: calc(100% - 40px);
+}
+
+.w-\[45px\] {
+  width: 45px;
+}
+
+.w-\[40px\] {
+  width: 40px;
+}
+
+.w-\[330px\] {
+  width: 330px;
+}
+
+.w-\[970px\] {
+  width: 970px;
+}
+
+.min-w-\[1115px\] {
+  min-width: 1115px;
+}
+
+.min-w-\[315px\] {
+  min-width: 315px;
+}
+
+.min-w-max {
+  min-width: -webkit-max-content;
+  min-width: max-content;
+}
+
+.min-w-\[375px\] {
+  min-width: 375px;
+}
+
+.min-w-\[432px\] {
+  min-width: 432px;
+}
+
+.translate-x-\[-50\%\] {
+  --tw-translate-x: -50%;
+  -webkit-transform: var(--tw-transform);
+  transform: var(--tw-transform);
+}
+
+.translate-y-\[-50\%\] {
+  --tw-translate-y: -50%;
+  -webkit-transform: var(--tw-transform);
+  transform: var(--tw-transform);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .max-w-\[1024px\] {
   max-width: 1024px;
 }
@@ -518,8 +742,86 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-x-5 {
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+}
+
+.gap-y-5 {
+  row-gap: 1.25rem;
+}
+
+.gap-x-4 {
+  -webkit-column-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.gap-x-\[5px\] {
+  -webkit-column-gap: 5px;
+  column-gap: 5px;
+}
+
+.gap-x-1 {
+  -webkit-column-gap: 0.25rem;
+  column-gap: 0.25rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.rounded-\[50\%\] {
+  border-radius: 50%;
+}
+
+.bg-\[\#2a2e33\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 46 51 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1567C3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 103 195 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E6266E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 38 110 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E70E1D\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 14 29 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ee1c25\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 28 37 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(202\2c 200\2c 200\2c 0\.7\)\] {
+  background-color: rgba(202, 200, 200, 0.7);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .gap-\[10px\] {
@@ -555,6 +857,41 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.7\)\] {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-\[\#0E0E0E\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Main\/btn_prev3\.png\'\)\] {
+  background-image: url("https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png");
+}
+
+.bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Main\/btn_next3\.png\'\)\] {
+  background-image: url("https://www.lottecinemavn.com/LCHS/Image/Main/btn_next3.png");
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.p-\[10px\] {
+  padding: 10px;
+}
+
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .bg-\[\#cdc197\] {
@@ -595,6 +932,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-\[18px\] {
   font-size: 18px;
 }
@@ -611,6 +967,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.leading-\[64px\] {
+  line-height: 64px;
+}
+
+.text-\[\#1a1917\] {
+  --tw-text-opacity: 1;
+  color: rgb(26 25 23 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .leading-\[50px\] {
   line-height: 50px;
 }
@@ -625,7 +1007,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
 .filter {
   -webkit-filter: var(--tw-filter);
-          filter: var(--tw-filter);
+  filter: var(--tw-filter);
 }
