@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import Routers from "./Routers";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import Routers from "./Routers";
 
 function App() {
   return (
