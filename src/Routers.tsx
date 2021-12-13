@@ -13,6 +13,12 @@ const Test = lazy(() =>
   }))
 );
 
+const GiftShop = lazy(() =>
+  import("./features/GiftShop").then(({ GiftShop }) => ({
+    default: GiftShop,
+  }))
+);
+
 export default function Routers() {
   return (
     <>
@@ -25,6 +31,11 @@ export default function Routers() {
         <Route exact path="/test">
           <Suspense fallback={"Loading..."}>
             <Test />
+          </Suspense>
+        </Route>
+        <Route exact path="/gift-shop">
+          <Suspense fallback={"Loading..."}>
+            <GiftShop />
           </Suspense>
         </Route>
       </Switch>
