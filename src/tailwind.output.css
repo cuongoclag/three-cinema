@@ -22,7 +22,7 @@
 
 ::before,
 ::after {
-  --tw-content: '';
+  --tw-content: "";
 }
 
 /*
@@ -41,7 +41,9 @@ html {
   /* 3 */
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -78,7 +80,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -122,7 +124,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -211,9 +214,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -260,7 +263,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -345,14 +348,16 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -422,7 +427,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.translate-x-\[-50\%\], .translate-y-\[-50\%\] {
+.translate-x-\[-50\%\],
+.translate-y-\[-50\%\] {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -430,7 +436,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-skew-y: 0;
   --tw-scale-x: 1;
   --tw-scale-y: 1;
-  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-transform: translateX(var(--tw-translate-x))
+    translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+    skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+    scaleY(var(--tw-scale-y));
 }
 
 body {
@@ -488,6 +497,33 @@ body {
   right: 0px;
 }
 
+.border,
+.border-l-2,
+.border-t-\[1px\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.filter {
+  --tw-blur: var(--tw-empty, /*!*/ /*!*/);
+  --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
+  --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
+  --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
+  --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-invert: var(--tw-empty, /*!*/ /*!*/);
+  --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
+  --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
+  --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
+  --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -518,6 +554,27 @@ body {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline {
@@ -574,6 +631,22 @@ body {
 
 .h-\[548px\] {
   height: 548px;
+}
+
+.h-24 {
+  height: 6rem;
+}
+
+.w-\[calc\(100\%_-_10px\)\] {
+  width: calc(100% - 10px);
+}
+
+.w-1\/3 {
+  width: 33.333333%;
+}
+
+.w-\[calc\(25\%_-_10px\)\] {
+  width: calc(25% - 10px);
 }
 
 .w-full {
@@ -640,13 +713,13 @@ body {
 .translate-x-\[-50\%\] {
   --tw-translate-x: -50%;
   -webkit-transform: var(--tw-transform);
-          transform: var(--tw-transform);
+  transform: var(--tw-transform);
 }
 
 .translate-y-\[-50\%\] {
   --tw-translate-y: -50%;
   -webkit-transform: var(--tw-transform);
-          transform: var(--tw-transform);
+  transform: var(--tw-transform);
 }
 
 .cursor-pointer {
@@ -655,6 +728,14 @@ body {
 
 .flex-col {
   flex-direction: column;
+}
+
+.max-w-\[1024px\] {
+  max-width: 1024px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -671,7 +752,7 @@ body {
 
 .gap-x-5 {
   -webkit-column-gap: 1.25rem;
-          column-gap: 1.25rem;
+  column-gap: 1.25rem;
 }
 
 .gap-y-5 {
@@ -680,17 +761,17 @@ body {
 
 .gap-x-4 {
   -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  column-gap: 1rem;
 }
 
 .gap-x-\[5px\] {
   -webkit-column-gap: 5px;
-          column-gap: 5px;
+  column-gap: 5px;
 }
 
 .gap-x-1 {
   -webkit-column-gap: 0.25rem;
-          column-gap: 0.25rem;
+  column-gap: 0.25rem;
 }
 
 .overflow-hidden {
@@ -735,12 +816,42 @@ body {
 }
 
 .bg-\[rgba\(202\2c 200\2c 200\2c 0\.7\)\] {
-  background-color: rgba(202,200,200,0.7);
+  background-color: rgba(202, 200, 200, 0.7);
 }
 
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.gap-\[10px\] {
+  gap: 10px;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-t-\[1px\] {
+  border-top-width: 1px;
+}
+
+.border-\[\#c0c0c0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(192 192 192 / var(--tw-border-opacity));
+}
+
+.border-\[\#dedede\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(222 222 222 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -749,7 +860,7 @@ body {
 }
 
 .bg-\[rgba\(0\2c 0\2c 0\2c 0\.7\)\] {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .bg-\[\#0E0E0E\] {
@@ -758,11 +869,11 @@ body {
 }
 
 .bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Main\/btn_prev3\.png\'\)\] {
-  background-image: url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png');
+  background-image: url("https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png");
 }
 
 .bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Main\/btn_next3\.png\'\)\] {
-  background-image: url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_next3.png');
+  background-image: url("https://www.lottecinemavn.com/LCHS/Image/Main/btn_next3.png");
 }
 
 .object-cover {
@@ -781,6 +892,40 @@ body {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.bg-\[\#cdc197\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(205 193 151 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.p-\[15px\] {
+  padding: 15px;
+}
+
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pl-1 {
+  padding-left: 0.25rem;
 }
 
 .text-center {
@@ -804,6 +949,18 @@ body {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-\[18px\] {
+  font-size: 18px;
+}
+
+.text-\[16px\] {
+  font-size: 16px;
+}
+
+.text-\[13px\] {
+  font-size: 13px;
 }
 
 .font-bold {
@@ -836,6 +993,15 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.leading-\[50px\] {
+  line-height: 50px;
+}
+
+.text-\[\#231f20\] {
+  --tw-text-opacity: 1;
+  color: rgb(35 31 32 / var(--tw-text-opacity));
+}
+
 .text-\[\#666\] {
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity));
@@ -849,4 +1015,8 @@ body {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+.filter {
+  -webkit-filter: var(--tw-filter);
+  filter: var(--tw-filter);
 }
