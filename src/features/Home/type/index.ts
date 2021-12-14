@@ -1,4 +1,4 @@
-export interface MovieType {
+export interface BannerType {
   title: string;
   age: number;
   time: number;
@@ -7,4 +7,25 @@ export interface MovieType {
 export interface MovieList {
   img: string;
   video: string;
+}
+
+export interface MovieType {
+  biDanh: string;
+  dangChieu: boolean;
+  danhGia: number;
+  hinhAnh: string;
+  hot: boolean;
+  maNhom: string;
+  maPhim: number;
+  moTa: string;
+  ngayKhoiChieu: Date;
+  sapChieu: boolean;
+  tenPhim: string;
+  trailer: string;
+}
+export interface MovieRespon {
+  statusCode: number;
+  message: string;
+  dateTime: Date;
+  content: MovieType[];
 }

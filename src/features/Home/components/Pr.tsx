@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import imagePr1 from "../../../assets/imgs/pr1.png";
-import imagePr2 from "../../../assets/imgs/pr2.png";
-import imagePr3 from "../../../assets/imgs/pr3.png";
-import imagePr4 from "../../../assets/imgs/pr4.png";
+import imagePr1 from "../../../assets/images/pr1.png";
+import imagePr2 from "../../../assets/images/pr2.png";
+import imagePr3 from "../../../assets/images/pr3.png";
+import imagePr4 from "../../../assets/images/pr4.png";
 
 export default function Pr() {
   const listIMG = [imagePr1, imagePr2, imagePr3, imagePr4];

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import imageGift1 from "../../../assets/imgs/banner_gift1.png";
-import imageGift2 from "../../../assets/imgs/banner_gift2.png";
-import imageGift3 from "../../../assets/imgs/banner_gift3.png";
-import imageGift4 from "../../../assets/imgs/banner_gift4.jpg";
-import imageGift5 from "../../../assets/imgs/banner_gift5.jpg";
-import imageMovie1 from "../../../assets/imgs/banner_movie1.png";
-import imageMovie2 from "../../../assets/imgs/banner_movie2.png";
-import imageMovie3 from "../../../assets/imgs/banner_movie3.jpg";
-import imageMovie4 from "../../../assets/imgs/banner_movie4.jpg";
-import { MovieList, MovieType } from "../type";
+import imageGift1 from "../../../assets/images/banner_gift1.png";
+import imageGift2 from "../../../assets/images/banner_gift2.png";
+import imageGift3 from "../../../assets/images/banner_gift3.png";
+import imageGift4 from "../../../assets/images/banner_gift4.jpg";
+import imageGift5 from "../../../assets/images/banner_gift5.jpg";
+import imageMovie1 from "../../../assets/images/banner_movie1.png";
+import imageMovie2 from "../../../assets/images/banner_movie2.png";
+import imageMovie3 from "../../../assets/images/banner_movie3.jpg";
+import imageMovie4 from "../../../assets/images/banner_movie4.jpg";
+import { MovieList, BannerType } from "../type";
 
 export default function Banner() {
   const listIMGGift: string[] = [
@@ -31,7 +31,7 @@ export default function Banner() {
   const [isTrailer, setIsTrailer] = useState<boolean>(false);
   const [indexIMGGift, setIndexIMGGift] = useState<number>(0);
   const [indexIMGMovie, setIndexIMGMovie] = useState<number>(0);
-  const listMovie: MovieType[] = [
+  const listMovie: BannerType[] = [
     {
       title: "VENOM: ĐỐI MẶT TỬ THÙ",
       age: 13,
@@ -119,6 +119,10 @@ export default function Banner() {
           src={listIMGGift[indexIMGGift]}
           alt="Gift"
         />
+        <div
+          className="absolute top-1/2 translate-y-[-50%] w-[38px] h-[71px] left-[18%] cursor-pointer bg-[url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png')]"
+          onClick={() => handlePrev()}
+        ></div>
       </div>
       <div className="relative min-w-[315px] h-[645px]">
         <h2 className="flex justify-center items-center uppercase h-[121px] bg-[#2a2e33] text-center py-[50px] mb-5">
@@ -182,17 +186,26 @@ export default function Banner() {
           alt="Button_Play"
           onClick={() => setIsTrailer(true)}
         />
+        <div
+          className="absolute top-1/2 translate-y-[-50%] w-[38px] h-[71px] right-[18%] cursor-pointer bg-[url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_next3.png')]"
+          onClick={() => handleNext()}
+        ></div>
       </div>
       {isTrailer && (
         <div className="fixed inset-0 z-50 bg-[rgba(0,0,0,0.7)]">
           <div className="absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[970px] h-[548px]">
             <iframe
               className="w-full h-full"
-              src={listIMGMovie[indexIMGMovie].video.replace(
-                "watch?v=",
-                "embed/"
-              )}
+              src={
+                listIMGMovie[indexIMGMovie].video.replace(
+                  "watch?v=",
+                  "embed/"
+                ) + "?autoplay=1"
+              }
+              frameBorder="0"
+              allowFullScreen
               title="Movie"
+              allow="autoplay; encrypted-media"
             />
             <img
               className="absolute right-[10px] top-[10px] cursor-pointer"
@@ -203,14 +216,6 @@ export default function Banner() {
           </div>
         </div>
       )}
-      <div
-        className="absolute top-1/2 translate-y-[-50%] w-[38px] h-[71px] left-[18%] cursor-pointer bg-[url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png')]"
-        onClick={() => handlePrev()}
-      ></div>
-      <div
-        className="absolute top-1/2 translate-y-[-50%] w-[38px] h-[71px] right-[18%] cursor-pointer bg-[url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_next3.png')]"
-        onClick={() => handleNext()}
-      ></div>
     </div>
   );
 }
