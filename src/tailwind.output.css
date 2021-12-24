@@ -597,8 +597,16 @@ body {
   margin-left: 0.5rem;
 }
 
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .inline {
@@ -673,6 +681,54 @@ body {
   height: 3rem;
 }
 
+.h-\[250px\] {
+  height: 250px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[531px\] {
+  height: 531px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[20000px\] {
+  height: 20000px;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
+}
+
+.h-80 {
+  height: 20rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -725,16 +781,45 @@ body {
   width: 980px;
 }
 
-.min-w-\[432px\] {
-  min-width: 432px;
+.w-\[175px\] {
+  width: 175px;
 }
 
-.min-w-\[1115px\] {
-  min-width: 1115px;
+.w-10 {
+  width: 2.5rem;
 }
 
-.min-w-\[315px\] {
-  min-width: 315px;
+.w-12 {
+  width: 3rem;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-2\/4 {
+  width: 50%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: max-content;
+}
+
+.min-w-\[25\%\] {
+  min-width: 25%;
+}
+
+.min-w-\[55\%\] {
+  min-width: 55%;
+}
+
+.min-w-\[20\%\] {
+  min-width: 20%;
 }
 
 .min-w-\[188px\] {
@@ -854,6 +939,28 @@ body {
 .gap-x-2 {
   -webkit-column-gap: 0.5rem;
           column-gap: 0.5rem;
+}
+
+.gap-x-\[25px\] {
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+}
+
+.gap-y-\[10px\] {
+  row-gap: 10px;
+}
+
+.gap-x-\[10px\] {
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-y-3 {
+  row-gap: 0.75rem;
 }
 
 .overflow-hidden {
@@ -979,6 +1086,33 @@ body {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#231f20\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 31 32 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.9\)\] {
+  background-color: rgba(0,0,0,0.9);
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.98\)\] {
+  background-color: rgba(0,0,0,0.98);
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.8\)\] {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f26b38\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 107 56 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Main\/btn_prev3\.png\'\)\] {
   background-image: url('https://www.lottecinemavn.com/LCHS/Image/Main/btn_prev3.png');
 }
@@ -1011,6 +1145,18 @@ body {
   padding: 10px;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-\[15px\] {
   padding-left: 15px;
   padding-right: 15px;
@@ -1024,6 +1170,16 @@ body {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .pt-8 {
@@ -1085,6 +1241,16 @@ body {
   font-size: 40px;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1113,6 +1279,10 @@ body {
   line-height: 48px;
 }
 
+.leading-\[44px\] {
+  line-height: 44px;
+}
+
 .text-\[\#231f20\] {
   --tw-text-opacity: 1;
   color: rgb(35 31 32 / var(--tw-text-opacity));
@@ -1138,8 +1308,22 @@ body {
   color: rgb(193 182 135 / var(--tw-text-opacity));
 }
 
+.text-\[\#cdc197\] {
+  --tw-text-opacity: 1;
+  color: rgb(205 193 151 / var(--tw-text-opacity));
+}
+
+.text-\[\#a0a3a7\] {
+  --tw-text-opacity: 1;
+  color: rgb(160 163 167 / var(--tw-text-opacity));
+}
+
 .opacity-20 {
   opacity: 0.2;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .filter {
@@ -1157,10 +1341,26 @@ body {
   transition-duration: 300ms;
 }
 
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .group:hover .group-hover\:block {
   display: block;
 }
 
 .group:hover .group-hover\:flex {
   display: flex;
+}
+
+.group:hover .group-hover\:bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
+  background-color: rgba(0,0,0,0.5);
 }

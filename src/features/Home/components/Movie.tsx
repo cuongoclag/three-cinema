@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Loading } from "../../../components/Loading/Loading";
+import { Routes } from "../../../utils";
 import { MovieType } from "../type";
 
 type MovieListType = {
@@ -33,7 +34,7 @@ export const Movie = () => {
           <img
             className={
               currentPage === 1
-                ? "w-[25px] h-[52px] rotate-180 cursor-pointer mr-2 opacity-20"
+                ? "w-[25px] h-[52px] rotate-180 cursor-pointer mr-2 opacity-0"
                 : "w-[25px] h-[52px] rotate-180 cursor-pointer mr-2"
             }
             src="https://www.lottecinemavn.com/LCHS/Image/Main/btn_next2_on.png"
@@ -59,7 +60,7 @@ export const Movie = () => {
                   Đặt vé
                 </Link>
                 <Link
-                  to=""
+                  to={Routes.movie + `?id=${item.maPhim}`}
                   className="w-[158px] h-12 leading-[48px] font-bold border border-[#c1b687] text-center text-[#c1b687] z-10"
                 >
                   Chi tiết
@@ -70,7 +71,7 @@ export const Movie = () => {
           <img
             className={
               currentPage === totalPage
-                ? "w-[25px] h-[52px] cursor-pointer ml-2 opacity-20"
+                ? "w-[25px] h-[52px] cursor-pointer ml-2 opacity-0"
                 : "w-[25px] h-[52px] cursor-pointer ml-2"
             }
             src="https://www.lottecinemavn.com/LCHS/Image/Main/btn_next2_on.png"

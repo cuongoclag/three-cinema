@@ -110,8 +110,8 @@ export default function Banner() {
       <div
         className={
           isWidth
-            ? "h-[645px] min-w-[432px] transition-all duration-300"
-            : "h-[645px] min-w-[1115px] transition-all duration-300"
+            ? "h-[645px] min-w-[25%] transition-all duration-300"
+            : "h-[645px] min-w-[55%] transition-all duration-300"
         }
       >
         <img
@@ -124,7 +124,7 @@ export default function Banner() {
           onClick={() => handlePrev()}
         ></div>
       </div>
-      <div className="relative min-w-[315px] h-[645px]">
+      <div className="relative min-w-[20%] h-[645px]">
         <h2 className="flex justify-center items-center uppercase h-[121px] bg-[#2a2e33] text-center py-[50px] mb-5">
           <img
             src="https://www.lottecinemavn.com/LCHS/Image/Main/h2_boxoffice.png"
@@ -171,8 +171,8 @@ export default function Banner() {
       <div
         className={
           isWidth
-            ? "relative h-[645px] min-w-[1115px] transition-all duration-300"
-            : "relative h-[645px] min-w-[432px] transition-all duration-300"
+            ? "relative h-[645px] min-w-[55%] transition-all duration-300"
+            : "relative h-[645px] min-w-[25%] transition-all duration-300"
         }
       >
         <img
