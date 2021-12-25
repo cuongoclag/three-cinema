@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router";
+import Login from "./features/Login/components/Login";
+import Register from "./features/Register/components/Register";
 import { Routes } from "./utils";
 
 const Home = lazy(() =>
@@ -37,6 +39,16 @@ export default function Routers() {
         <Route path={Routes.giftshop}>
           <Suspense fallback={"Loading..."}>
             <GiftShop />
+          </Suspense>
+        </Route>
+        <Route exact path="/login">
+          <Suspense fallback={"Loading..."}>
+            <Login />
+          </Suspense>
+        </Route>
+        <Route exact path="/register">
+          <Suspense fallback={"Loading..."}>
+            <Register />
           </Suspense>
         </Route>
       </Switch>
