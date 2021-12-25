@@ -15,14 +15,16 @@
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.7",
     "axios": "^0.24.0",
+    "date-fns": "^2.27.0",
     "json-server": "^0.16.1",
+    "query-string": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.22.5",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
-    "react-toastify": "^8.1.0",
+    "react-toastify": "^8.0.3",
     "typescript": "~4.1.5"
   },
   "scripts": {

@@ -20,7 +20,7 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
   const refCateGift3 = useRef<HTMLDivElement>(null);
   const [activeCateGift, setactiveCateGift] = useState<number>(1);
 
-  const [giftShop, setGiftShop] = useState<GiftShop[]>([
+  const [giftShop] = useState<GiftShop[]>([
     {
       id: 1,
       title: "Harmony Couple Combo",

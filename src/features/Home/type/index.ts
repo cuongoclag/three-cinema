@@ -29,3 +29,10 @@ export interface MovieRespon {
   dateTime: Date;
   content: MovieType[];
 }
+
+export interface MovieDetailRespon {
+  statusCode: number;
+  message: string;
+  dateTime: Date;
+  content: MovieType;
+}
