@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router";
+import Login from "./features/Login/components/Login";
+import Register from "./features/Register/components/Register";
 
 const Home = lazy(() =>
   import("./features/Home").then(({ Home }) => ({
@@ -36,6 +38,16 @@ export default function Routers() {
         <Route exact path="/gift-shop">
           <Suspense fallback={"Loading..."}>
             <GiftShop />
+          </Suspense>
+        </Route>
+        <Route exact path="/login">
+          <Suspense fallback={"Loading..."}>
+            <Login />
+          </Suspense>
+        </Route>
+        <Route exact path="/register">
+          <Suspense fallback={"Loading..."}>
+            <Register />
           </Suspense>
         </Route>
       </Switch>

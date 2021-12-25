@@ -18,7 +18,7 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
   const refCateGift1 = useRef<HTMLDivElement>(null);
   const refCateGift2 = useRef<HTMLDivElement>(null);
   const refCateGift3 = useRef<HTMLDivElement>(null);
-  const [activeCateGift, setactiveCateGift] = useState<number>(1)
+  const [activeCateGift, setactiveCateGift] = useState<number>(1);
 
   const [giftShop, setGiftShop] = useState<GiftShop[]>([
     {
@@ -57,21 +57,21 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
 
   const handleCateGift = (ref: number) => {
     if (ref === 1) {
-      setactiveCateGift(ref)
+      setactiveCateGift(ref);
       if (!refCateGift1.current) return;
       refCateGift1.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     } else if (ref === 2) {
-      setactiveCateGift(ref)
+      setactiveCateGift(ref);
       if (!refCateGift2.current) return;
       refCateGift2.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     } else {
-      setactiveCateGift(ref)
+      setactiveCateGift(ref);
       if (!refCateGift3.current) return;
       refCateGift3.current.scrollIntoView({
         behavior: "smooth",
@@ -84,19 +84,25 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
     <div className="max-w-[1024px] mx-auto">
       <div className="flex w-[calc(100%_-_10px)] sticky top-0 bg-white">
         <button
-          className={`w-1/3 leading-[50px] text-center h-[50px] ${activeCateGift === 1 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"}`}
+          className={`w-1/3 leading-[50px] text-center h-[50px] ${
+            activeCateGift === 1 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"
+          }`}
           onClick={() => handleCateGift(1)}
         >
           <p className="font-bold">Bán Chạy Nhât</p>
         </button>
         <button
-          className={`w-1/3 leading-[50px] text-center h-[50px] ${activeCateGift === 2 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"}`}
+          className={`w-1/3 leading-[50px] text-center h-[50px] ${
+            activeCateGift === 2 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"
+          }`}
           onClick={() => handleCateGift(2)}
         >
           <p className="font-bold">Danh Mục Bán Hàng</p>
         </button>
         <button
-          className={`w-1/3 leading-[50px] text-center h-[50px] ${activeCateGift === 3 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"}`}
+          className={`w-1/3 leading-[50px] text-center h-[50px] ${
+            activeCateGift === 3 ? "bg-[#cdc197]" : "border border-[#c0c0c0]"
+          }`}
           onClick={() => handleCateGift(3)}
         >
           <p className="font-bold">Lotte Combo</p>
@@ -112,7 +118,10 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .filter((item) => item.category === 1)
               .map((item) => {
                 return (
-                  <div className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10" key={item.id}>
+                  <div
+                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                    key={item.id}
+                  >
                     <img
                       className="w-full object-cover"
                       src={item.img}
@@ -151,7 +160,10 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .filter((item) => item.category === 2)
               .map((item) => {
                 return (
-                  <div className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10" key={item.id}>
+                  <div
+                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                    key={item.id}
+                  >
                     <img
                       className="w-full object-cover"
                       src={item.img}
@@ -190,7 +202,10 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .filter((item) => item.category === 3)
               .map((item) => {
                 return (
-                  <div className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10" key={item.id}>
+                  <div
+                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                    key={item.id}
+                  >
                     <img
                       className="w-full object-cover"
                       src={item.img}
