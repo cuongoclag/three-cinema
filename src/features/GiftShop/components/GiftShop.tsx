@@ -1,59 +1,18 @@
 import { GiftShopProps } from "../type";
-import IMG from "../../../assets/images/gift_img_1.jpg";
-import IMG2 from "../../../assets/images/gift_img_2.png";
-import IMG3 from "../../../assets/images/gift_img_3.jpg";
-import IMG4 from "../../../assets/images/gift_img_4.jpg";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { Routes } from "../../../utils";
+import GiftShopList from "../type"
+import {dataGiftShopList} from "../fakeapi"
 
 export const GiftShop: React.FC<GiftShopProps> = () => {
-  interface GiftShop {
-    id: number;
-    title: string;
-    price: string;
-    date: string;
-    img: string;
-    category: number;
-  }
 
   const refCateGift1 = useRef<HTMLDivElement>(null);
   const refCateGift2 = useRef<HTMLDivElement>(null);
   const refCateGift3 = useRef<HTMLDivElement>(null);
   const [activeCateGift, setactiveCateGift] = useState<number>(1);
 
-  const [giftShop] = useState<GiftShop[]>([
-    {
-      id: 1,
-      title: "Harmony Couple Combo",
-      price: "135.000",
-      date: "3 tháng",
-      img: IMG,
-      category: 1,
-    },
-    {
-      id: 2,
-      title: "Vé Xem Phim 2D",
-      price: "105.000",
-      date: "3 tháng",
-      img: IMG2,
-      category: 2,
-    },
-    {
-      id: 3,
-      title: "Harmony Combo",
-      price: "110.000",
-      date: "3 tháng",
-      img: IMG3,
-      category: 3,
-    },
-    {
-      id: 4,
-      title: "Harmony Plus Combo",
-      price: "135.000",
-      date: "3 tháng",
-      img: IMG4,
-      category: 3,
-    },
-  ]);
+  const [giftShop, setGiftShop] = useState<GiftShopList[]>(dataGiftShopList);
 
   const handleCateGift = (ref: number) => {
     if (ref === 1) {
@@ -89,7 +48,7 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
           }`}
           onClick={() => handleCateGift(1)}
         >
-          <p className="font-bold">Bán Chạy Nhât</p>
+          <p className="font-bold">Bán Chạy Nhất</p>
         </button>
         <button
           className={`w-1/3 leading-[50px] text-center h-[50px] ${
@@ -118,35 +77,36 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .filter((item) => item.category === 1)
               .map((item) => {
                 return (
-                  <div
-                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                  <Link
+                  to={`${Routes.giftshop}${item.id}`}
+                    className="group w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
                     key={item.id}
                   >
-                    <img
-                      className="w-full object-cover"
-                      src={item.img}
-                      alt="gift-shop"
-                    />
-                    <div className="px-[15px] pb-5 pt-4 h-24">
-                      <p className="font-bold text-[#231f20] text-[16px]">
-                        {item.title}
-                      </p>
-                      <p className="text-[#666] text-[13px]">
-                        Hạn sử dụng sản phẩm{" "}
-                        <span className="ml-1 border-l-2 pl-1">
-                          {item.date}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
-                      <p className="font-bold text-[#666] text-[13px]">
-                        Giá bán online
-                      </p>
-                      <p className="font-bold text-[#231f20] text-[18px]">
-                        {item.price} đ
-                      </p>
-                    </div>
-                  </div>
+                      <img
+                        className="w-full object-cover"
+                        src={item.img}
+                        alt="gift-shop"
+                      />
+                      <div className="px-[15px] pb-5 pt-4 h-24">
+                        <p className="font-bold text-[#231f20] text-[16px]">
+                          {item.title}
+                        </p>
+                        <p className="text-[#666] text-[13px]">
+                          Hạn sử dụng sản phẩm{" "}
+                          <span className="ml-1 border-l-2 pl-1">
+                            {item.date}
+                          </span>
+                        </p>
+                      </div>
+                      <div className="group-hover:bg-[#4c4c4c] flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
+                        <p className="group-hover:text-white font-bold text-[#666] text-[13px]">
+                          Giá bán online
+                        </p>
+                        <p className="group-hover:text-white font-bold text-[#231f20] text-[18px]">
+                          {(item.price).toLocaleString('vi', {style : 'currency', currency : 'VND'})}
+                        </p>
+                      </div>
+                  </Link>
                 );
               })}
           </div>
@@ -161,33 +121,35 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .map((item) => {
                 return (
                   <div
-                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                    className="group w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
                     key={item.id}
                   >
-                    <img
-                      className="w-full object-cover"
-                      src={item.img}
-                      alt="gift-shop"
-                    />
-                    <div className="px-[15px] pb-5 pt-4 h-24">
-                      <p className="font-bold text-[#231f20] text-[16px]">
-                        {item.title}
-                      </p>
-                      <p className="text-[#666] text-[13px]">
-                        Hạn sử dụng sản phẩm{" "}
-                        <span className="ml-1 border-l-2 pl-1">
-                          {item.date}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
-                      <p className="font-bold text-[#666] text-[13px]">
-                        Giá bán online
-                      </p>
-                      <p className="font-bold text-[#231f20] text-[18px]">
-                        {item.price} đ
-                      </p>
-                    </div>
+                      <Link to={`${Routes.giftshop}${item.id}`}>
+                      <img
+                        className="w-full object-cover"
+                        src={item.img}
+                        alt="gift-shop"
+                      />
+                      <div className="px-[15px] pb-5 pt-4 h-24">
+                        <p className="font-bold text-[#231f20] text-[16px]">
+                          {item.title}
+                        </p>
+                        <p className="text-[#666] text-[13px]">
+                          Hạn sử dụng sản phẩm{" "}
+                          <span className="ml-1 border-l-2 pl-1">
+                            {item.date}
+                          </span>
+                        </p>
+                      </div>
+                      <div className="group-hover:bg-[#4c4c4c] flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
+                        <p className="group-hover:text-white font-bold text-[#666] text-[13px]">
+                          Giá bán online
+                        </p>
+                        <p className="group-hover:text-white font-bold text-[#231f20] text-[18px]">
+                          {(item.price).toLocaleString('vi', {style : 'currency', currency : 'VND'})}
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 );
               })}
@@ -203,33 +165,35 @@ export const GiftShop: React.FC<GiftShopProps> = () => {
               .map((item) => {
                 return (
                   <div
-                    className="w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
+                    className="group w-[calc(25%_-_10px)] border-[#dedede] border mb-10"
                     key={item.id}
                   >
-                    <img
-                      className="w-full object-cover"
-                      src={item.img}
-                      alt="gift-shop"
-                    />
-                    <div className="px-[15px] pb-5 pt-4 h-24">
-                      <p className="font-bold text-[#231f20] text-[16px]">
-                        {item.title}
-                      </p>
-                      <p className="text-[#666] text-[13px]">
-                        Hạn sử dụng sản phẩm{" "}
-                        <span className="ml-1 border-l-2 pl-1">
-                          {item.date}
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
-                      <p className="font-bold text-[#666] text-[13px]">
-                        Giá bán online
-                      </p>
-                      <p className="font-bold text-[#231f20] text-[18px]">
-                        {item.price} đ
-                      </p>
-                    </div>
+                      <Link to={`${Routes.giftshop}${item.id}`}>
+                      <img
+                        className="w-full object-cover"
+                        src={item.img}
+                        alt="gift-shop"
+                      />
+                      <div className="px-[15px] pb-5 pt-4 h-24">
+                        <p className="font-bold text-[#231f20] text-[16px]">
+                          {item.title}
+                        </p>
+                        <p className="text-[#666] text-[13px]">
+                          Hạn sử dụng sản phẩm{" "}
+                          <span className="ml-1 border-l-2 pl-1">
+                            {item.date}
+                          </span>
+                        </p>
+                      </div>
+                      <div className="group-hover:bg-[#4c4c4c] flex gap-5 p-[15px] justify-between items-center border-t-[1px]">
+                        <p className="group-hover:text-white font-bold text-[#666] text-[13px]">
+                          Giá bán online
+                        </p>
+                        <p className="group-hover:text-white font-bold text-[#231f20] text-[18px]">
+                          {(item.price).toLocaleString('vi', {style : 'currency', currency : 'VND'})}
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 );
               })}
