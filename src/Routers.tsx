@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router";
 import Login from "./features/Login/components/Login";
 import Register from "./features/Register/components/Register";
+import {GiftShopDetail}from "./features/GiftShop/components/GiftShopDetail";
+
 import { Routes } from "./utils";
 
 const Home = lazy(() =>
@@ -21,6 +23,7 @@ const GiftShop = lazy(() =>
     default: GiftShop,
   }))
 );
+
 
 export default function Routers() {
   return (
@@ -49,6 +52,11 @@ export default function Routers() {
         <Route exact path="/register">
           <Suspense fallback={"Loading..."}>
             <Register />
+          </Suspense>
+        </Route>
+        <Route exact path="/gift-shop:id">
+          <Suspense fallback={"Loading..."}>
+            <GiftShopDetail />
           </Suspense>
         </Route>
       </Switch>
