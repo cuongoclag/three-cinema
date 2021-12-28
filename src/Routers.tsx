@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router";
 import Login from "./features/Login/components/Login";
+import Movies from "./features/Movies/components/Movies";
 import Register from "./features/Register/components/Register";
 import { Routes } from "./utils";
 
@@ -49,6 +50,11 @@ export default function Routers() {
         <Route exact path="/register">
           <Suspense fallback={"Loading..."}>
             <Register />
+          </Suspense>
+        </Route>
+        <Route exact path="/moives">
+          <Suspense fallback={"Loading..."}>
+            <Movies />
           </Suspense>
         </Route>
       </Switch>
