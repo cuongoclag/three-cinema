@@ -433,7 +433,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.border-8, .border, .border-\[1px\], .border-2, .border-y-\[1px\], .border-r-\[1px\], .border-b-\[2px\], .border-l-2, .border-t-\[1px\], .border-b-2 {
+.border-8, .border, .border-\[1px\], .border-2, .border-y-\[1px\], .border-x-\[1px\], .border-r-\[1px\], .border-b-\[2px\], .border-l-2, .border-t-\[1px\], .border-t-\[2px\], .border-r-\[2px\], .border-b-\[1px\] {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
@@ -486,6 +486,13 @@ body {
   left: 0px;
 }
 
+.inset-2 {
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
 .right-\[23\%\] {
   right: 23%;
 }
@@ -524,6 +531,10 @@ body {
 
 .bottom-\[100\%\] {
   bottom: 100%;
+}
+
+.bottom-\[40px\] {
+  bottom: 40px;
 }
 
 .z-\[99px\] {
@@ -588,24 +599,19 @@ body {
   margin-right: auto;
 }
 
+.my-\[15px\] {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .my-\[70px\] {
   margin-top: 70px;
   margin-bottom: 70px;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .my-7 {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .mr-3 {
@@ -680,10 +686,6 @@ body {
   margin-left: 5rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .block {
   display: block;
 }
@@ -740,6 +742,10 @@ body {
   height: 6rem;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
 .h-\[645px\] {
   height: 645px;
 }
@@ -792,10 +798,6 @@ body {
   height: 98px;
 }
 
-.h-\[42px\] {
-  height: 42px;
-}
-
 .h-\[420px\] {
   height: 420px;
 }
@@ -804,16 +806,16 @@ body {
   height: auto;
 }
 
-.h-\[334px\] {
-  height: 334px;
-}
-
-.min-h-screen {
-  min-height: 100vh;
+.h-\[40px\] {
+  height: 40px;
 }
 
 .min-h-\[55px\] {
   min-height: 55px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-16 {
@@ -846,6 +848,22 @@ body {
 
 .w-\[calc\(25\%_-_10px\)\] {
   width: calc(25% - 10px);
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[55px\] {
+  width: 55px;
+}
+
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[38px\] {
@@ -917,6 +935,10 @@ body {
   width: 80%;
 }
 
+.w-\[230px\] {
+  width: 230px;
+}
+
 .min-w-\[25\%\] {
   min-width: 25%;
 }
@@ -943,10 +965,6 @@ body {
 
 .max-w-\[1024px\] {
   max-width: 1024px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .flex-1 {
@@ -1014,10 +1032,6 @@ body {
   align-items: center;
 }
 
-.justify-start {
-  justify-content: flex-start;
-}
-
 .justify-end {
   justify-content: flex-end;
 }
@@ -1068,6 +1082,10 @@ body {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-\[20px\] {
+  gap: 20px;
 }
 
 .gap-x-5 {
@@ -1139,19 +1157,6 @@ body {
   border-radius: 0.25rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .border-8 {
   border-width: 8px;
 }
@@ -1173,6 +1178,11 @@ body {
   border-bottom-width: 1px;
 }
 
+.border-x-\[1px\] {
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
 .border-r-\[1px\] {
   border-right-width: 1px;
 }
@@ -1189,8 +1199,16 @@ body {
   border-top-width: 1px;
 }
 
-.border-b-2 {
-  border-bottom-width: 2px;
+.border-t-\[2px\] {
+  border-top-width: 2px;
+}
+
+.border-r-\[2px\] {
+  border-right-width: 2px;
+}
+
+.border-b-\[1px\] {
+  border-bottom-width: 1px;
 }
 
 .border-\[rgba\(255\2c 255\2c 255\2c 0\.4\)\] {
@@ -1217,6 +1235,11 @@ body {
   border-color: rgb(222 222 222 / var(--tw-border-opacity));
 }
 
+.border-\[\#b9b9b9\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(185 185 185 / var(--tw-border-opacity));
+}
+
 .border-\[\#c1b687\] {
   --tw-border-opacity: 1;
   border-color: rgb(193 182 135 / var(--tw-border-opacity));
@@ -1237,6 +1260,17 @@ body {
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-x-\[\#b9b9b9\] {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(185 185 185 / var(--tw-border-opacity));
+  border-right-color: rgb(185 185 185 / var(--tw-border-opacity));
+}
+
 .border-t-\[\#fff\] {
   --tw-border-opacity: 1;
   border-top-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -1245,6 +1279,31 @@ body {
 .border-l-\[\#fff\] {
   --tw-border-opacity: 1;
   border-left-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-t-black {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-r-\[\#f9f6ec\] {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(249 246 236 / var(--tw-border-opacity));
+}
+
+.border-b-\[\#f9f6ec\] {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(249 246 236 / var(--tw-border-opacity));
+}
+
+.border-r-black {
+  --tw-border-opacity: 1;
+  border-right-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-b-black {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
@@ -1264,6 +1323,11 @@ body {
 .bg-\[\#cdc197\] {
   --tw-bg-opacity: 1;
   background-color: rgb(205 193 151 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#efebdb\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 235 219 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#2a2e33\] {
@@ -1328,19 +1392,9 @@ body {
   background-color: rgb(28 25 23 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#efebdb\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 235 219 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#dad2b4\] {
   --tw-bg-opacity: 1;
   background-color: rgb(218 210 180 / var(--tw-bg-opacity));
-}
-
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .bg-slate-900 {
@@ -1348,33 +1402,14 @@ body {
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
-.bg-orange-300 {
+.bg-\[\#efefef\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+  background-color: rgb(239 239 239 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
+.bg-yellow-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-\[rgba\(0\2c 0\2c 0\2c 0\.3\)\] {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/bg\/bg_gnb\.gif\'\)\] {
@@ -1403,10 +1438,6 @@ body {
 
 .bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Bg\/bg_indicator_off\.png\'\)\] {
   background-image: url('https://www.lottecinemavn.com/LCHS/Image/Bg/bg_indicator_off.png');
-}
-
-.bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/btn\/btn_st02_on\.gif\'\)\] {
-  background-image: url('https://www.lottecinemavn.com/LCHS/Image/btn/btn_st02_on.gif');
 }
 
 .bg-left-top {
@@ -1461,16 +1492,16 @@ body {
   padding: 0.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-\[60px\] {
   padding: 60px;
 }
 
 .p-16 {
   padding: 4rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .py-\[19px\] {
@@ -1493,9 +1524,9 @@ body {
   padding-right: 15px;
 }
 
-.py-\[50px\] {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .py-10 {
@@ -1503,19 +1534,9 @@ body {
   padding-bottom: 2.5rem;
 }
 
-.py-\[5px\] {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.px-\[10px\] {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.px-\[210px\] {
-  padding-left: 210px;
-  padding-right: 210px;
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .py-5 {
@@ -1523,14 +1544,34 @@ body {
   padding-bottom: 1.25rem;
 }
 
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.px-\[210px\] {
+  padding-left: 210px;
+  padding-right: 210px;
+}
+
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
-}
-
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .px-16 {
@@ -1538,44 +1579,19 @@ body {
   padding-right: 4rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-\[46px\] {
-  padding-top: 46px;
-  padding-bottom: 46px;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .pr-3 {
@@ -1614,12 +1630,20 @@ body {
   padding-left: 0.25rem;
 }
 
-.pt-\[3\.5rem\] {
-  padding-top: 3.5rem;
+.pr-1 {
+  padding-right: 0.25rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-\[12px\] {
+  padding-bottom: 12px;
+}
+
+.pt-\[3\.5rem\] {
+  padding-top: 3.5rem;
 }
 
 .pt-\[12px\] {
@@ -1675,6 +1699,14 @@ body {
   font-size: 13px;
 }
 
+.text-\[24px\] {
+  font-size: 24px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1699,13 +1731,13 @@ body {
   line-height: 2rem;
 }
 
+.text-\[14px\] {
+  font-size: 14px;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
 }
 
 .font-semibold {
@@ -1752,6 +1784,10 @@ body {
   line-height: 50px;
 }
 
+.leading-\[30px\] {
+  line-height: 30px;
+}
+
 .leading-\[64px\] {
   line-height: 64px;
 }
@@ -1764,12 +1800,12 @@ body {
   line-height: 44px;
 }
 
-.leading-7 {
-  line-height: 1.75rem;
-}
-
 .leading-8 {
   line-height: 2rem;
+}
+
+.leading-\[40px\] {
+  line-height: 40px;
 }
 
 .text-zinc-400 {
@@ -1832,6 +1868,11 @@ body {
   color: rgb(102 102 102 / var(--tw-text-opacity));
 }
 
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .text-purple-800 {
   --tw-text-opacity: 1;
   color: rgb(107 33 168 / var(--tw-text-opacity));
@@ -1842,14 +1883,14 @@ body {
   color: rgb(113 63 18 / var(--tw-text-opacity));
 }
 
-.text-gray-700 {
+.text-red-700 {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-.text-gray-400 {
+.text-red-600 {
   --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -1894,26 +1935,9 @@ body {
   border-style: none;
 }
 
-.hover\:block:hover {
-  display: block;
-}
-
-.hover\:flex:hover {
-  display: flex;
-}
-
 .hover\:bg-yellow-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\]:hover {
-  background-color: rgba(0,0,0,0.5);
 }
 
 .hover\:text-yellow-800:hover {
@@ -1926,18 +1950,18 @@ body {
   border-color: rgb(168 85 247 / var(--tw-border-opacity));
 }
 
-.focus\:bg-black:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.active\:bg-blue-600:active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+.focus\:text-red-600:focus {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .active\:bg-\[url\(\'https\:\/\/www\.lottecinemavn\.com\/LCHS\/Image\/Bg\/bg_indicator_on\.png\'\)\]:active {
   background-image: url('https://www.lottecinemavn.com/LCHS/Image/Bg/bg_indicator_on.png');
+}
+
+.active\:text-red-600:active {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:block {
@@ -1948,12 +1972,16 @@ body {
   display: flex;
 }
 
+.group:hover .group-hover\:bg-\[\#4c4c4c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 76 76 / var(--tw-bg-opacity));
+}
+
 .group:hover .group-hover\:bg-\[rgba\(0\2c 0\2c 0\2c 0\.5\)\] {
   background-color: rgba(0,0,0,0.5);
 }
 
-@media (min-width: 768px) {
-  .md\:w-64 {
-    width: 16rem;
-  }
+.group:hover .group-hover\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }

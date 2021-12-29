@@ -22,7 +22,7 @@ export default function Menu() {
     },
     {
       titleMenu: "promotion",
-      link: "/gift-shop",
+      link: "/promotions",
     },
   ];
 
