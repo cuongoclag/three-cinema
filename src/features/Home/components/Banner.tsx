@@ -106,7 +106,7 @@ export default function Banner() {
   };
 
   return (
-    <div className="relative flex gap-x-5">
+    <div className="relative flex gap-x-5 mt-5">
       <div
         className={
           isWidth

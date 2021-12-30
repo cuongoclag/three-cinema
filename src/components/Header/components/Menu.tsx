@@ -14,7 +14,7 @@ export default function Menu() {
     },
     {
       titleMenu: "movies",
-      link: "/gift-shop",
+      link: "/moives",
     },
     {
       titleMenu: "cinemas",
@@ -22,12 +22,12 @@ export default function Menu() {
     },
     {
       titleMenu: "promotion",
-      link: "/gift-shop",
+      link: "/promotions",
     },
   ];
 
   return (
-    <div className=" border-b-[2px] mb-5 border-yellow-100">
+    <div className=" border-b-[2px]  border-yellow-100">
       <ul className="flex flex-row justify-center p-[25px] gap-3.5">
         {listMenu.map((item, index) => (
           <li
